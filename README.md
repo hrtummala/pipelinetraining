@@ -1,2 +1,2 @@
 # pipelinetraining
-training
+training pipeline
