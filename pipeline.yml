@@ -1,0 +1,15 @@
+---
+resources:
+- name: hemanth-training
+  type: git
+  source:
+    uri: https://github.com/hrtummala/pipelinetraining.git
+    branch: master
+    
+jobs:
+- name: check_resources
+  plan:
+    - get: hemanth-training
+      trigger: true
+    - task: list-resources
+      file: hemanth-training/list_resources.yml
